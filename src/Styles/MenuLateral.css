@@ -1,0 +1,15 @@
+.menu-lateral{
+    height: 100vh;
+    background-color:beige;
+    position: fixed;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    top: 90px;
+    left: 0;
+    z-index: 9;
+    padding: 1rem;
+}
+
+

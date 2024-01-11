@@ -1,0 +1,22 @@
+.render-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.titulo{
+    font-size: 36px;
+}
+
+.render-div .lista-ul{
+    padding: 0%;
+    border: 1px solid white;
+}
+
+
+.lista-ul li{
+    list-style-type: none;
+    border: 1px solid white;
+
+}
