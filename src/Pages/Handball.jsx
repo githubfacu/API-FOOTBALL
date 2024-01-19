@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import LeaguesCard from '../Componentes/LeaguesCard'
 import '../Styles/ArquitecturaUno.css'
 
 export default function Handball(){
@@ -83,17 +84,16 @@ export default function Handball(){
     return (
         <div className='render-div'>
             <h2 className='titulo'>Handball</h2>
-            <ul className='lista-ul'>
-                {handballInfo.map((liga)=>{
-                return <> 
-                    <li key={liga.id}>
-                    <h2>{liga.name}</h2>
-                    <img className='logo' onClick={mouseClick}
-                    src={liga.logo} alt={"logo de la liga: " + `${liga.name}`} />                
-                    </li>
-                </>
-                })}
-            </ul>   
+            <div className='cards-div'>
+            {handballInfo.map((liga)=>{
+                return <LeaguesCard 
+                    id = {liga.id}
+                    name = {liga.name}
+                    logo = {liga.logo}
+                    url = {url}
+                />
+            })}
+            </div>
         </div>
     )
 }

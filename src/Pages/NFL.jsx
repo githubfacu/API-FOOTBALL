@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import LeaguesCard from '../Componentes/LeaguesCard'
+import '../Styles/ArquitecturaUno.css'
 
 const NFL = () => {
     const [nflInfo, setNflInfo] = useState([])
@@ -24,7 +26,19 @@ const NFL = () => {
     console.log(nflInfo);
 
   return (
-    <div>NFL</div>
+    <div className='render-div'>
+        <h2 className='titulo'>NFL</h2>
+        <div className='cards-div'>
+            {nflInfo.map((liga)=>{
+                return <LeaguesCard 
+                    id = {liga.id}
+                    name = {liga.name}
+                    logo = {liga.logo}
+                    url = {url}
+                />
+            })}
+        </div>
+    </div>
   )
 }
 

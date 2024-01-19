@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import LeaguesCard from '../Componentes/LeaguesCard'
+import '../Styles/ArquitecturaUno.css'
 
 const Volleyball = () => {
     const [infoVolley, setInfoVolley] = useState([])
@@ -24,7 +26,19 @@ const Volleyball = () => {
     console.log(infoVolley);
 
   return (
-    <div>Volleyball</div>
+    <div className='render-div'>
+        <h2 className='titulo'>Volleyball</h2>
+        <div className='cards-div'>
+            {infoVolley.map((liga)=>{
+                return <LeaguesCard 
+                    id = {liga.id}
+                    name = {liga.name}
+                    logo = {liga.logo}
+                    url = {url}
+                />
+            })}
+        </div>
+    </div>
   )
 }
 

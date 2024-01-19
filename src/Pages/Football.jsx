@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import { toast } from 'react-toastify'
 import '../Styles/ArquitecturaUno.css'
+import LeaguesCard from '../Componentes/LeaguesCard'
 
 export default function Football(){
     const [infoFutbol, setInfoFutbol] = useState([])
 
-    const endpointFutbol = ('https://v3.football.api-sports.io/')
+    const url = ('https://v3.football.api-sports.io/')
 
 
     const mouseClick = () => {
@@ -24,7 +25,7 @@ export default function Football(){
     const headers = {"x-rapidapi-key": "5e4589f6667afda2b7b7e7fdd88c8fad","x-rapidapi-host": "v3.football.api-sports.io"}
 
     useEffect(() => {
-        fetch(endpointFutbol+'leagues',{headers: headers})
+        fetch(url+'leagues',{headers: headers})
             .then(res=>{
                 if(res.ok)
                 return res.json()
@@ -39,21 +40,17 @@ export default function Football(){
 
     return (
         <div className='render-div'>
-            <div>
-                 <h2 className='titulo'>Futbol</h2>
-                 <ul className='lista-ul'>
-                    {infoFutbol.map((liga)=>{
-                    return <> 
-                        <li key={liga.league.id}>
-                        <h2>{liga.league.name}</h2>
-                        <img className='logo' onClick={mouseClick}
-                        src={liga.league.logo} alt={"bandera de la liga: " + `${liga.league.name}`} />                
-                        </li>
-                    </>
-                    })}
-                </ul>   
+            <h2 className='titulo'>Football</h2>
+            <div className='cards-div'>
+            {infoFutbol.map((liga)=>{
+                return <LeaguesCard 
+                    id = {liga.league.id}
+                    name = {liga.league.name}
+                    logo = {liga.league.logo}
+                    url = {url}
+                />
+            })}
             </div>
-            
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import LeaguesCard from '../Componentes/LeaguesCard'
 import '../Styles/ArquitecturaUno.css'
 
 export default function Baseball(){
@@ -60,37 +61,21 @@ export default function Baseball(){
     //     fetchInfo()
     // },[])
 
-    const mouseClick = () => {
-        toast.info('🦄 Wow so easy!', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-            });
-    }
-
+    console.log(info);
 
     return (
         <div className='render-div'>
-            <div className='baseball'>
-                <h2 className='titulo'>Ligas de Baseball</h2>
-                <ul className='lista-ul'>
-                    {info.map((liga)=>{
-                    return <> 
-                        <li key={liga.id}>
-                        <h2>{liga.name}</h2>
-                        <img className='logo' onClick={mouseClick}
-                        src={liga.logo} alt={"logo de la liga: " + `${liga.name}`} />                
-                        </li>
-                    </>
-                    })}
-                </ul>   
-            </div>
-            
+            <h2 className='titulo'>Baseball</h2>
+            {info && <div className='cards-div'>
+            {info.map((liga)=>{
+                return <LeaguesCard 
+                    id = {liga.id}
+                    name = {liga.name}
+                    logo = {liga.logo}
+                    url = {url}
+                />
+            })}
+            </div>}
         </div>
     )
 }

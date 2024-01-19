@@ -11,8 +11,10 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <h2 onClick={onClick}>API-FOOTBALL</h2>
-      <img src="/Images/favicon.ico" alt="API-FOOTBALL icono" />        
+      <div className='caja'>
+        <h2 onClick={onClick}>API-FOOTBALL</h2>
+        <img src="/Images/favicon.ico" alt="API-FOOTBALL icono" />           
+      </div>
     </div>
   )
 }

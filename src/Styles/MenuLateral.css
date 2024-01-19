@@ -1,5 +1,5 @@
 .menu-lateral{
-    height: 100vh;
+    height: 100%;
     background-color:beige;
     position: fixed;    
     display: flex;

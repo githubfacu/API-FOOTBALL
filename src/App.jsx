@@ -12,8 +12,8 @@ import Volleyball from './Pages/Volleyball'
 import Baseball from './Pages/Baseball'
 import Basketball from './Pages/Basketball'
 import Football from './Pages/Football'
+import Standings from './Componentes/Standings'
 import './App.css'
-
 
 function App() {
 
@@ -22,19 +22,19 @@ function App() {
       <ToastContainer /> 
       <Header />
       <MenuLateral />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/Baseball' element={<Baseball />}/>
-        <Route path='/Basketball' element={<Basketball /> } />
-        <Route path='/Football' element={<Football />} />
-        <Route path='/Handball' element={<Handball />}/>
-        <Route path='/Hockey' element={<Hockey /> } />
-        <Route path='/NBA' element={<NBA />} />
-        <Route path='/NFL' element={<NFL />} />
-        <Route path='/Rugby' element={<Rugby />} />
-        <Route path='/Volleyball' element={<Volleyball />} />
-      </Routes>
-
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Baseball' element={<Baseball />}/>
+          <Route path='/Basketball' element={<Basketball /> } />
+          <Route path='/Football' element={<Football />} />
+          <Route path='/Handball' element={<Handball />}/>
+          <Route path='/Hockey' element={<Hockey /> } />
+          <Route path='/NBA' element={<NBA />} />
+          <Route path='/NFL' element={<NFL />} />
+          <Route path='/Rugby' element={<Rugby />} />
+          <Route path='/Volleyball' element={<Volleyball />} />
+          <Route path='/Standings/:id' element={<Standings />} />
+        </Routes>
     </>
   )
 }
