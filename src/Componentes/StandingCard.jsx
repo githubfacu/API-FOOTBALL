@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../Styles/Standings.css'
 
 const StandingCard = ({props}) => {
 
-  const liga = props[0].league
-  const puntos = props[0].points
+  const [liga, setLiga] = useState({})
+  const [puntos, setPuntos] = useState({})
+
   const clubes = props
 
   console.log(clubes)
-  console.log(clubes[1].team)
   console.log(puntos)
   console.log(liga)
+
+  useEffect(()=>{
+    if(props[0].league){
+      setLiga(props[0].league)
+    }
+    if(props[0].points){
+      setPuntos(props[0].points)
+    }
+    if(props[0].points){
+      setPuntos(props[0].points)
+    }
+  }, [])
 
   const imgHover = () => {
     return <p>as</p>

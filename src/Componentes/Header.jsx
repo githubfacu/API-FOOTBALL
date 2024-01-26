@@ -5,15 +5,15 @@ import '../Styles/Header.css'
 const Header = () => {
   const navigate = useNavigate()
 
-  const onClick = ()=>{
+  const homeNavigate = ()=>{
     navigate('/')
   }
 
   return (
     <div className='header'>
       <div className='caja'>
-        <h2 onClick={onClick}>API-FOOTBALL</h2>
-        <img src="/Images/favicon.ico" alt="API-FOOTBALL icono" />           
+        <img src="/Images/favicon.ico" alt="API-FOOTBALL icono" />
+        <h2 onClick={homeNavigate}>API-FOOTBALL</h2>
       </div>
     </div>
   )

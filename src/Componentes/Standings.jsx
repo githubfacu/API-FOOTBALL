@@ -34,10 +34,17 @@ const Standings = () => {
   const selectSeason = (value) => {
     setSeason(value)
   }
+
+  const cargandoDatos = () => {
+    setTimeout(() => {
+      if (info.length === 0) {
+        return <p>Vuelve a intentar</p>
+      }
+    }, 5000);
+  }
   
   console.log(info);
   console.log(url);
-  
 
   return (
     <div>

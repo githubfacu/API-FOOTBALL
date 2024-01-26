@@ -13,6 +13,9 @@ import Baseball from './Pages/Baseball'
 import Basketball from './Pages/Basketball'
 import Football from './Pages/Football'
 import Standings from './Componentes/Standings'
+import ErrorBoundary from './utils/ErrorBoundary'
+import NBAStandings from './Componentes/NBAStandings'
+import NFLStandings from './Componentes/NFLStandings'
 import './App.css'
 
 function App() {
@@ -22,6 +25,7 @@ function App() {
       <ToastContainer /> 
       <Header />
       <MenuLateral />
+      <ErrorBoundary>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Baseball' element={<Baseball />}/>
@@ -34,7 +38,10 @@ function App() {
           <Route path='/Rugby' element={<Rugby />} />
           <Route path='/Volleyball' element={<Volleyball />} />
           <Route path='/Standings/:id' element={<Standings />} />
+          <Route path='/NBAStandings' element={<NBAStandings />} />
+          <Route path='/NFLStandings' element={<NFLStandings />} />
         </Routes>
+      </ErrorBoundary>
     </>
   )
 }
