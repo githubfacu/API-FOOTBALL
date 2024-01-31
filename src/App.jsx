@@ -37,7 +37,7 @@ function App() {
           <Route path='/NFL' element={<NFL />} />
           <Route path='/Rugby' element={<Rugby />} />
           <Route path='/Volleyball' element={<Volleyball />} />
-          <Route path='/Standings/:id' element={<Standings />} />
+          <Route path='/Standings/:deporte/:id' element={<Standings />} />
           <Route path='/NBAStandings' element={<NBAStandings />} />
           <Route path='/NFLStandings' element={<NFLStandings />} />
         </Routes>

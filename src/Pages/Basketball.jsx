@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import LeaguesCard from '../Componentes/LeaguesCard'
-import '../Styles/ArquitecturaUno.css'
+import '../Styles/Pages.css'
 
 
 const Basketball = () => {
     const [infoBasketball, setInfoBasketball] = useState([])
-
+    const deporte = 'Basketball'
     const url = ('https://v1.basketball.api-sports.io/')
 
     const configuraciones = {
@@ -28,7 +28,7 @@ const Basketball = () => {
 
   return (
     <div className='render-div'>
-        <h2 className='titulo'>Basketball</h2>
+        <h2 className='titulo'>{deporte}</h2>
         <div className='cards-div'>
             {infoBasketball.map((liga)=>{
                 return <LeaguesCard 
@@ -36,6 +36,7 @@ const Basketball = () => {
                     name = {liga.name}
                     logo = {liga.logo}
                     url = {url}
+                    deporte = {deporte}
                 />
             })}
         </div>

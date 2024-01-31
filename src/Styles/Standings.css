@@ -1,7 +1,33 @@
+.standing-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid white;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5%;
+}
+
+.standings-render{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    margin-top: 1rem;
+}
+
 .datos-de-tabla{
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    border: 1px solid white;
+}
+
+.datos-de-tabla h3{
+    padding: 5px 0;
+    width: 12%;
+    margin: 0%;
+    text-align: center;
+    border: 1px solid white;
 }
 
 .tabla{
@@ -12,10 +38,26 @@
     padding: 0;
 }
 
+.club-names{
+    display: flex;
+    gap: 12px;
+    width: 62%;
+    align-items: center;
+    padding-left: 6px;
+}
+
 .tabla li{
     display: flex;
+    box-sizing: border-box;
     width: 100%;
-    justify-content: space-between;
-    gap: 1rem;
     align-items: center;
+    text-align: center;
+}
+
+.tabla li h3{
+    width: 12%;
+}
+
+.club-names h3{
+    text-align: start;
 }

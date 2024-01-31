@@ -1,13 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../Styles/ArquitecturaUno.css'
+import '../Styles/Pages.css'
 
-const LeaguesCard = ({ id, name, logo, url}) => {
+const LeaguesCard = ({ id, name, logo, url, deporte}) => {
   const navigate = useNavigate()
 
   const navegacion = () => {
     sessionStorage.setItem('url', url)
-    navigate('/Standings/'+id)
+    navigate('/Standings/'+deporte+'/'+id)
   }
 
 

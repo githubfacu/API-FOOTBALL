@@ -51,3 +51,7 @@
     text-align: center;
     border: 1px solid white;
 }
+
+.home a:hover{
+    background-color: #f57005;
+}

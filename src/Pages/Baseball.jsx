@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import LeaguesCard from '../Componentes/LeaguesCard'
-import '../Styles/ArquitecturaUno.css'
+import '../Styles/Pages.css'
 
 export default function Baseball(){
     const [info, setInfo] = useState([])
-
+    const deporte = 'Baseball'
     const url = ('https://v1.baseball.api-sports.io/')
 
     const configuraciones = {
@@ -65,7 +65,7 @@ export default function Baseball(){
 
     return (
         <div className='render-div'>
-            <h2 className='titulo'>Baseball</h2>
+            <h2 className='titulo'>{deporte}</h2>
             {info && <div className='cards-div'>
             {info.map((liga)=>{
                 return <LeaguesCard 
@@ -73,6 +73,7 @@ export default function Baseball(){
                     name = {liga.name}
                     logo = {liga.logo}
                     url = {url}
+                    deporte = {deporte}
                 />
             })}
             </div>}

@@ -1,15 +1,43 @@
 .menu-lateral{
     height: 100%;
+    width: 90px;
     background-color:beige;
     position: fixed;    
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
     top: 90px;
     left: 0;
     z-index: 9;
     padding: 1rem;
+    padding-top: 20px;
 }
 
+.menu-lateral a{
+    color: rgb(238, 79, 0);
+    font-size: 18px;
+}
 
+.deporte{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    text-align: center;    
+}
+
+.deporte ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(255, 255, 252);
+    list-style-type: none;
+    padding: .2rem;
+    margin: .5rem 0;
+    text-align: start;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;      
+}
+
+.deporte ul a{
+    font-size: 14px;
+}

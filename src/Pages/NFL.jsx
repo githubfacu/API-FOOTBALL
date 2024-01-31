@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../Styles/ArquitecturaUno.css'
+import '../Styles/Pages.css'
 
 const NFL = () => {
     const navigate = useNavigate()
@@ -13,11 +13,7 @@ const NFL = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>NFL</h2>
-        <div className='cards-div' style={{
-            display: 'flex', flexDirection: 'column', alignItems: 'center'
-        }}>
-            <img onClick={navegarNFLStandings} width={'350px'} src="/Images/logo-NFL.png" alt="NFL-logo" />
-        </div>
+        <img style={{alignSelf: 'center', marginTop: '-1.2rem'}} onClick={navegarNFLStandings} width={'350'} src="/Images/logo-NFL.png" alt="NFL-logo" />
     </div>
   )
 }

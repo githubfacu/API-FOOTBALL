@@ -46,7 +46,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'American Football Conference' && club.division === 'AFC East'){
+                    if(club.conference === 'American Football Conference' && club.division.includes('East')){
                     return <NFLStandingCard club={club}/>
                     }
                 })}
@@ -63,7 +63,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'American Football Conference' && club.division === 'AFC North'){
+                    if(club.conference === 'American Football Conference' && club.division.includes('North')){
                     return <NFLStandingCard club={club}/>
                 }
                 })}
@@ -80,7 +80,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'American Football Conference' && club.division === 'AFC South'){
+                    if(club.conference === 'American Football Conference' && club.division.includes('South')){
                     return <NFLStandingCard club={club}/>
                 }
                 })}
@@ -97,7 +97,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'American Football Conference' && club.division === 'AFC West'){
+                    if(club.conference === 'American Football Conference' && club.division.includes('West')){
                     return <NFLStandingCard club={club}/>
                 }
                 })}
@@ -114,7 +114,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'National Football Conference' && club.division === 'NFC East'){
+                    if(club.conference === 'National Football Conference' && club.division.includes('East')){
                     return <NFLStandingCard club={club}/>
                 }
                 })}
@@ -131,7 +131,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'National Football Conference' && club.division === 'NFC North'){
+                    if(club.conference === 'National Football Conference' && club.division.includes('North')){
                     return <NFLStandingCard club={club}/>
                 }
                 })}
@@ -148,7 +148,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'National Football Conference' && club.division === 'NFC South'){
+                    if(club.conference === 'National Football Conference' && club.division.includes('South')){
                     return <NFLStandingCard club={club}/>
                 }
                 })}
@@ -165,7 +165,7 @@ const NFLStandings = () => {
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
-                    if(club.conference === 'National Football Conference' && club.division === 'NFC West'){
+                    if(club.conference === 'National Football Conference' && club.division.includes('West')){
                     return <NFLStandingCard club={club}/>
                 }
                 })}

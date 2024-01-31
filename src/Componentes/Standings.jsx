@@ -2,6 +2,7 @@ import React, { useState , useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import StandingCard from './StandingCard'
 import SelectYear from './SelectYear'
+import '../Styles/Standings.css'
 
 const Standings = () => {
   const [info, setInfo] = useState([])
@@ -47,7 +48,7 @@ const Standings = () => {
   console.log(url);
 
   return (
-    <div>
+    <div className='standing-table'>
       <SelectYear selectSeason={selectSeason}/>
       {info.length === 0 ? (<p>Cargando datos...</p>) : (
         <div className='standings-render'>

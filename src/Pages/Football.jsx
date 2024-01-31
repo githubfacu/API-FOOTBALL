@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { toast } from 'react-toastify'
-import '../Styles/ArquitecturaUno.css'
 import LeaguesCard from '../Componentes/LeaguesCard'
+import '../Styles/Pages.css'
 
 export default function Football(){
     const [infoFutbol, setInfoFutbol] = useState([])
-
+    const deporte = 'Football'
     const url = ('https://v3.football.api-sports.io/')
 
 
@@ -40,7 +40,7 @@ export default function Football(){
 
     return (
         <div className='render-div'>
-            <h2 className='titulo'>Football</h2>
+            <h2 className='titulo'>{deporte}</h2>
             <div className='cards-div'>
             {infoFutbol.map((liga)=>{
                 return <LeaguesCard 
@@ -48,6 +48,7 @@ export default function Football(){
                     name = {liga.league.name}
                     logo = {liga.league.logo}
                     url = {url}
+                    deporte = {deporte}
                 />
             })}
             </div>

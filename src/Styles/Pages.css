@@ -2,18 +2,22 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: center;
-    border: 1px solid white;
+    height: 80vh;
 }
 
 .titulo{
-    font-size: 36px;
+    font-size: 48px;
     align-self: center;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 1.5%;
+    height: 20%;
 }
 
 .cards-div{
     display: flex;
     flex-direction: row;
+    margin-left: 90px;
     overflow-y:hidden;
     overflow-x:auto;
     white-space: nowrap;
@@ -21,7 +25,6 @@
 
 .card{
     list-style-type: none;
-    border: 1px solid white;
     border-right: 2px solid white;
     display: inline-block;
 }
