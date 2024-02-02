@@ -7,7 +7,7 @@ const Home = () => {
         <img src="/Images/hero-banner.png" alt="logo de API-FOOTBALL" />
         <div className='titulo'>
           <h2>dfdf</h2>
-          <p>sdasd</p>
+          <p>Tablas</p>
         </div>
         <a href="/Baseball"><h2>Baseball</h2></a>
         <a href="/Basketball"><h2>Basketball</h2></a>

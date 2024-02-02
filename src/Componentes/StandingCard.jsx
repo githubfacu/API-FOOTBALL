@@ -32,7 +32,7 @@ const StandingCard = ({props}) => {
     <h2>{liga.name} ({pais})</h2>
     <div className='datos-de-tabla'>
       <h3 style={{width: '14%'}}>Pos</h3>
-      <h3 style={{width: '62%', textAlign:'start', paddingLeft: '12px'}}>Club</h3>
+      <h3 style={{width: '62%', textAlign:'start', paddingLeft: '2rem'}}>Club</h3>
       {puntos.for ? (<h3>PF</h3>) : (<h3 style={{width: '24%'}}>PTS</h3>)}
       {puntos.against && (<h3>PC</h3>)}
     </div>
@@ -43,7 +43,6 @@ const StandingCard = ({props}) => {
           <img src={club.team.logo} alt="esc" width={'30px'} height={'30px'}/>
           {club.league.standing ? (<h3>{club.league.standing.team.name}</h3>) : (<h3 style={{width: '80%'}}>{club.team.name}</h3>)}            
         </div>
-
           {club.points.for ? (<h3>{club.points.for}</h3>) : (<h3 style={{width: '24%'}}>{club.points}</h3>)}
           {club.points.against && (<h3>{club.points.against}</h3>)}
         </li>)

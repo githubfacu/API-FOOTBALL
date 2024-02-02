@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import SelectYear from './SelectYear'
 import NFLStandingCard from './NFLStandingCard'
+import '../Styles/Standings.css'
 
 
 const NFLStandings = () => {
@@ -32,17 +33,16 @@ const NFLStandings = () => {
     }
 
   return (
-    <div>
+    <div className='standing-table'>
     <SelectYear selectSeason={selectSeason}/>
     {nflInfo.length === 0 ? (<p>Cargando datos...</p>) : (
       <div className='standings-render'>
+        <img style={{maxWidth: '400px', maxHeight:'350px'}} src="/Images/logo-NFL.png" alt="nfl-logo" />
         <article>
-            <div>
-                <h2>American Football Conference</h2>
-                <h3>AFC East</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>
+            <h2 style={{textAlign: 'center', marginTop: '3rem'}}>American Football Conference</h2>
+            <h3>AFC East</h3>      
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
@@ -54,12 +54,9 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <div>
-                <h2>American Football Conference</h2>
-                <h3>AFC North</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>                
+            <h3>AFC North</h3>
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
@@ -71,12 +68,9 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <div>
-                <h2>American Football Conference</h2>
-                <h3>AFC South</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>                
+            <h3>AFC South</h3>
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
@@ -88,12 +82,9 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <div>
-                <h2>American Football Conference</h2>
-                <h3>AFC West</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>                
+            <h3>AFC West</h3>
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
@@ -105,12 +96,10 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <div>
-                <h2>National Football Conference</h2>
-                <h3>NFC East</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>                
+            <h2 style={{textAlign: 'center', marginTop: '4rem'}}>National Football Conference</h2>
+            <h3>NFC East</h3>
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
@@ -122,12 +111,9 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <div>
-                <h2>National Football Conference</h2>
-                <h3>NFC North</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>                
+            <h3>NFC North</h3>
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
@@ -139,12 +125,9 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <div>
-                <h2>National Football Conference</h2>
-                <h3>NFC South</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>                
+            <h3>NFC South</h3>
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
@@ -156,12 +139,9 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <div>
-                <h2>National Football Conference</h2>
-                <h3>NFC West</h3>
-                <div className='datos-de-tabla'>
-                    <h3>Pos</h3><h3>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
-                </div>                
+            <h3>NFC West</h3>
+            <div className='datos-de-tabla-NFL'>
+                <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
             </div>
             <ul className='tabla'>
                 {nflInfo.map((club)=>{
