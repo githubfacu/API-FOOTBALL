@@ -17,6 +17,7 @@ import ErrorBoundary from './utils/ErrorBoundary'
 import NBAStandings from './Componentes/NBAStandings'
 import NFLStandings from './Componentes/NFLStandings'
 import './App.css'
+import NavigateButton from './Componentes/navigateButton'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <ToastContainer /> 
       <Header />
       <MenuLateral />
+      <NavigateButton />
       <ErrorBoundary>
         <Routes>
           <Route path='/' element={<Home />} />

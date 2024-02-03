@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MenuLateralCard from './MenuLateralCard'
 import '../Styles/MenuLateral.css'
 
 const MenuLateral = () => {
+
+  const [over, setOver] = useState(false)
 
   const ligas = [{
     deporte: 'Baseball', liga1: 'Bundesliga', liga1id: '48', liga2: 'LMBP', liga2id: '57', liga3: 'LMP', liga3id: '22'
@@ -24,12 +26,22 @@ const MenuLateral = () => {
     deporte: 'Volleyball', liga1: 'Super League', liga1id: '52', liga2: 'LVA', liga2id: '4', liga3: 'Liga Women', liga3id: '3'
   }]
 
+  const mostrarMenu = (() => {
+    setOver(true)
+  })
+
+  const ocultarMenu = (() => {
+    setOver(false)
+  })
 
   return (
-    <div className='menu-lateral'>
-      {ligas.map((liga)=>{
-        return <MenuLateralCard props={liga}/>
-      })}
+    <div className='menu-lateral' onMouseOut={ocultarMenu} onMouseOver={mostrarMenu}>
+      {over ? <>
+        {ligas.map((liga)=>{
+          return <MenuLateralCard props={liga}/>
+        })}
+      </> : <i class="fa-solid fa-angle-right fa-xl"></i>}
+
     </div>
   )
 }

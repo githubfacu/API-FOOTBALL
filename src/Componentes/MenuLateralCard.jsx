@@ -23,7 +23,7 @@ const MenuLateralCard = ({props}) => {
         } else{
             setValidar(false)
         }
-    }, [visibilidad])
+    }, []) //Aca se deberia colocar visivilidad en el Array de dependencias
 
 
   return (
