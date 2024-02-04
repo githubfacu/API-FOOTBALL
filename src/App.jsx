@@ -16,13 +16,15 @@ import Standings from './Componentes/Standings'
 import ErrorBoundary from './utils/ErrorBoundary'
 import NBAStandings from './Componentes/NBAStandings'
 import NFLStandings from './Componentes/NFLStandings'
-import './App.css'
 import NavigateButton from './Componentes/navigateButton'
+import Footer from './Componentes/Footer'
+import './App.css'
+
 
 function App() {
 
   return (
-    <>
+    <div className='app-div'>
       <ToastContainer /> 
       <Header />
       <MenuLateral />
@@ -44,7 +46,8 @@ function App() {
           <Route path='/NFLStandings' element={<NFLStandings />} />
         </Routes>
       </ErrorBoundary>
-    </>
+      <Footer />
+    </div>
   )
 }
 

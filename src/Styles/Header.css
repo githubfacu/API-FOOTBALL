@@ -22,6 +22,7 @@
     font-size: 24px;
     margin: 0;
     padding: .2rem .5rem 0;
+    color: beige;
 }
 .header h2:hover{
     cursor: pointer;

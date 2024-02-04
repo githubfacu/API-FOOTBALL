@@ -4,10 +4,6 @@ import '../Styles/Home.css'
 const Home = () => {
   return (
     <div className='home'>
-        <div className='titulo'>
-          <img className='futbol-flag' src="../../public/Images/115-sm.jpg" alt="logo de API-FOOTBALL" />
-          <p></p>
-        </div>
         <a href="/Baseball">
           <img width={'100px'} src="/Images/baseball-logo.png" alt="" />
           <h2>Baseball</h2>
@@ -41,7 +37,7 @@ const Home = () => {
           <h2>Rugby</h2>
         </a>
         <a href="/Volleyball">
-          <img width={'100px'} src="../../public/Images/min-volleyball.png" alt="" />
+          <img width={'100px'} src="/Images/min-volleyball.png" alt="" />
           <h2>Volleyball</h2>
         </a>
     </div>

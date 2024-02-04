@@ -5,7 +5,6 @@ import '../Styles/MenuLateral.css'
 const MenuLateral = () => {
 
   const [over, setOver] = useState(false)
-
   const ligas = [{
     deporte: 'Baseball', liga1: 'Bundesliga', liga1id: '48', liga2: 'LMBP', liga2id: '57', liga3: 'LMP', liga3id: '22'
   }, {
@@ -40,7 +39,8 @@ const MenuLateral = () => {
         {ligas.map((liga)=>{
           return <MenuLateralCard props={liga}/>
         })}
-      </> : <i class="fa-solid fa-angle-right fa-xl"></i>}
+        <img src="/Images/115-sm.jpg" alt="logo-futbol" />
+      </> : <i className="fa-solid fa-angle-right fa-xl"></i>}
 
     </div>
   )

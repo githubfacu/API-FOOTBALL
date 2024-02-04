@@ -2,10 +2,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 1px solid white;
     align-items: center;
     justify-content: center;
-    padding: 2.5%;
+    padding: 3rem 0;
 }
 
 .standings-render{

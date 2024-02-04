@@ -1,5 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import '../Styles/ErrorBoundary.css'
+
 
 export default class ErrorBoundary extends React.Component {
     constructor (props){
@@ -14,15 +15,11 @@ export default class ErrorBoundary extends React.Component {
 
     render() {
         if(this.state.hasError){
-            return <div style={{
-                display: 'flex',
-                boxSizing: 'border-box',
-                padding: '0 15%',
-                width: '100%',
-                justifyContent: 'center'
-            }}>
-            <h1>Ha ocurrido un error</h1>
-            <a href='/'>ir a Home</a>
+            return <div className="boundary">
+                <h1>Ha ocurrido un error</h1>
+                <a href='/'>ir a Home</a>
+
+                <img src="/Images/fotor-ai-arbitro-roja.jpg" alt="" />
             </div>
         }
         return this.props.children

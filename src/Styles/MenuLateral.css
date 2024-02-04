@@ -1,47 +1,41 @@
 .menu-lateral{
-    height: 100%;
-    background-color:beige;
-    position: fixed;    
     display: flex;
     flex-direction: column;
+    position: fixed;    
+    height: 100%;
+    background-color:beige;
     justify-content: center;
     top: 0;
     left: 0;
     z-index: 9;
-    padding: 0 .5rem;
+    padding: 0 .2rem;
 }
 
 .fa-angle-right{
     color: blue;
     align-self: center;
+    padding: .7rem;
+}
+
+.menu-lateral img{
+    width: 75%;
+    position: absolute;
+    top: 105px;
+    align-self: center;
 }
 
 .menu-lateral a{
-    color: #9f0000;
+    color: #242424;
     font-size: 18px;
-}
-
-.deporte{
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    text-align: center;
-}
-
-.deporte ul{
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
     width: 100%;
-    background-color: rgb(255, 255, 252);
-    list-style-type: none;
-    padding: .2rem;
-    margin: .5rem 0;
-    text-align: start;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;      
+    text-align: center;
+    padding: .5rem 1rem;
+    margin: 10px 0 0;
 }
 
-.deporte ul a{
-    font-size: 14px;
+
+.menu-lateral a:hover{
+    background-color: #9f0000ac;
+    color: black;
 }
