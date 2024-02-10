@@ -11,7 +11,8 @@ const SelectYear = ({selectSeason}) => {
     };
 
   return (
-    <div style={{display: 'flex', gap:'.5rem'}}>
+    <div style={{display: 'flex', gap:'.5rem', padding: '1rem',
+    background: '#121212'}}>
         <legend>Temporada</legend>
         <select style={{
           borderRadius: '3px',

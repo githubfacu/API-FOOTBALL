@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 const MenuLateralCard = ({props}) => {
 
-
-    const locacion = window.location.pathname
-
     console.log(props);
-
 
   return (
     <>

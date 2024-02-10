@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import SelectYear from './SelectYear'
 import NFLStandingCard from './NFLStandingCard'
 import '../Styles/Standings.css'
+import Spinner from './Spinner'
 
 
 const NFLStandings = () => {
@@ -35,7 +36,7 @@ const NFLStandings = () => {
   return (
     <div className='standing-table'>
     <SelectYear selectSeason={selectSeason}/>
-    {nflInfo.length === 0 ? (<p>Cargando datos...</p>) : (
+    {nflInfo.length === 0 ? <div className='spinner-container'><Spinner /></div> : (
       <div className='standings-render'>
         <img style={{maxWidth: '400px', maxHeight:'350px'}} src="/Images/logo-NFL.png" alt="nfl-logo" />
         <article>

@@ -9,6 +9,7 @@ const Header = () => {
     navigate('/')
   }
 
+
   return (
     <div className='header'>
       <div className='caja'>

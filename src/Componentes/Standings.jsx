@@ -2,11 +2,13 @@ import React, { useState , useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import StandingCard from './StandingCard'
 import SelectYear from './SelectYear'
+import Spinner from './Spinner'
 import '../Styles/Standings.css'
 
 const Standings = () => {
   const [info, setInfo] = useState([])
   const [season, setSeason] = useState('2023')
+  const [cargandoDatos, setCargandoDatos] = useState(true)
   const params = useParams()
   console.log(params)
   const url = sessionStorage.getItem('url')
@@ -36,27 +38,33 @@ const Standings = () => {
     setSeason(value)
   }
 
-  const cargandoDatos = () => {
-    setTimeout(() => {
-      if (info.length === 0) {
-        return <p>Vuelve a intentar</p>
-      }
-    }, 5000);
-  }
-  
+  useEffect(() => {
+    const temporizador = setTimeout(() => {
+      setCargandoDatos(false)
+    }, 3000);
+
+    return () => clearTimeout(temporizador)
+  }, [season])
+
   console.log(info);
   console.log(url);
 
   return (
     <div className='standing-table'>
       <SelectYear selectSeason={selectSeason}/>
-      {info.length === 0 ? (<p>Cargando datos...</p>) : (
+
+        {(info.length === 0 && cargandoDatos) && <div className='spinner-container'><Spinner /></div>}
+        {(info.length === 0 && !cargandoDatos) && <p style={{
+          marginTop: '2rem', padding: '.5rem 1rem', background: '#121212'}}>Datos no encontrados para esta liga, seleccione otra liga, temporada, o vuelva a intentarlo mas tarde</p>}
+      
+        {info.length !== 0 && (
         <div className='standings-render'>
           {info.map((club)=>{
             return <StandingCard props={club}/>
           })}
         </div>
       )}
+
     </div>
   )
 }

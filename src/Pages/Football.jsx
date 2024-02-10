@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { toast } from 'react-toastify'
 import LeaguesCard from '../Componentes/LeaguesCard'
 import '../Styles/Pages.css'
+import Spinner from '../Componentes/Spinner'
 
 export default function Football(){
     const [infoFutbol, setInfoFutbol] = useState([])
@@ -41,7 +42,7 @@ export default function Football(){
     return (
         <div className='render-div'>
             <h2 className='titulo'>{deporte}</h2>
-            <div className='cards-div'>
+            {infoFutbol.length === 0 ? <Spinner /> : <div className='cards-div'>
             {infoFutbol.map((liga)=>{
                 return <LeaguesCard 
                     id = {liga.league.id}
@@ -51,7 +52,7 @@ export default function Football(){
                     deporte = {deporte}
                 />
             })}
-            </div>
+            </div>}
         </div>
     )
 }

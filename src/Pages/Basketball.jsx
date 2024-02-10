@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import LeaguesCard from '../Componentes/LeaguesCard'
 import '../Styles/Pages.css'
+import Spinner from '../Componentes/Spinner'
 
 
 const Basketball = () => {
@@ -29,7 +30,7 @@ const Basketball = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>{deporte}</h2>
-        <div className='cards-div'>
+        {infoBasketball.length === 0 ? <Spinner /> : <div className='cards-div'>
             {infoBasketball.map((liga)=>{
                 return <LeaguesCard 
                     id = {liga.id}
@@ -39,7 +40,7 @@ const Basketball = () => {
                     deporte = {deporte}
                 />
             })}
-        </div>
+        </div>}
     </div>
   )
 }

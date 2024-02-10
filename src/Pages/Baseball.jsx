@@ -2,7 +2,10 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import LeaguesCard from '../Componentes/LeaguesCard'
+import BuscarPreDefinida from '../Componentes/BuscarPreDefinida'
 import '../Styles/Pages.css'
+import Spinner from '../Componentes/Spinner'
+
 
 export default function Baseball(){
     const [info, setInfo] = useState([])
@@ -66,7 +69,7 @@ export default function Baseball(){
     return (
         <div className='render-div'>
             <h2 className='titulo'>{deporte}</h2>
-            {info && <div className='cards-div'>
+            {info.length === 0 ? <Spinner /> : <div className='cards-div'>
             {info.map((liga)=>{
                 return <LeaguesCard 
                     id = {liga.id}
@@ -77,6 +80,9 @@ export default function Baseball(){
                 />
             })}
             </div>}
+            <section>
+                <BuscarPreDefinida />
+            </section>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import LeaguesCard from '../Componentes/LeaguesCard'
 import '../Styles/Pages.css'
+import Spinner from '../Componentes/Spinner'
 
 const Rugby = () => {
     const [infoRugby, setInfoRugby] = useState([])
@@ -28,7 +29,7 @@ const Rugby = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>{deporte}</h2>
-        <div className='cards-div'>
+        {infoRugby.length === 0 ? <Spinner /> : <div className='cards-div'>
             {infoRugby.map((liga)=>{
                 return <LeaguesCard 
                     id = {liga.id}
@@ -39,6 +40,7 @@ const Rugby = () => {
                 />
             })}
         </div>
+        }
     </div>
   )
 }

@@ -10,8 +10,15 @@
     align-self: center;
     display: flex;
     box-sizing: border-box;
-    padding-top: 1.5%;
-    height: 20%;
+    place-items: center;
+    margin: 4rem 0;
+    background-color: #141414;
+    padding: .5rem 1rem;
+}
+
+.render-div img:hover{
+    cursor: pointer;
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .cards-div{
@@ -21,6 +28,7 @@
     overflow-y:hidden;
     overflow-x:auto;
     white-space: nowrap;
+    background-color: #141414;
 }
 
 .card{
@@ -47,4 +55,9 @@
 .navigate-button:hover{
   filter: drop-shadow(0 0 2em #646cffaa);
   cursor: pointer;
+}
+
+.render-div section{
+    align-self: center;
+    margin-top: 4rem;
 }

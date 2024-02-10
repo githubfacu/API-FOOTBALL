@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import SelectYear from './SelectYear'
 import '../Styles/Standings.css'
+import Spinner from './Spinner'
 
 const NBAStandings = () => {
 
@@ -31,7 +32,7 @@ const NBAStandings = () => {
   return (
     <div className='standing-table'>
     <SelectYear selectSeason={selectSeason}/>
-    {infoNBA.length === 0 ? (<p>Cargando datos...</p>) : (
+    {infoNBA.length === 0 ? <div className='spinner-container'><Spinner /></div> : (
       <div className='standings-render'>
         <article>
             <div style={{
