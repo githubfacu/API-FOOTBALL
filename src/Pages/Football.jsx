@@ -42,17 +42,19 @@ export default function Football(){
     return (
         <div className='render-div'>
             <h2 className='titulo'>{deporte}</h2>
-            {infoFutbol.length === 0 ? <Spinner /> : <div className='cards-div'>
-            {infoFutbol.map((liga)=>{
-                return <LeaguesCard 
-                    id = {liga.league.id}
-                    name = {liga.league.name}
-                    logo = {liga.league.logo}
-                    url = {url}
-                    deporte = {deporte}
-                />
-            })}
-            </div>}
+            <div className='contenido-pages'>
+                {infoFutbol.length === 0 ? <Spinner /> : <div className='cards-div'>
+                {infoFutbol.map((liga)=>{
+                    return <LeaguesCard 
+                        id = {liga.league.id}
+                        name = {liga.league.name}
+                        logo = {liga.league.logo}
+                        url = {url}
+                        deporte = {deporte}
+                    />
+                })}
+                </div>}
+            </div>
         </div>
     )
 }

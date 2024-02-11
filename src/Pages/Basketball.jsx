@@ -9,6 +9,7 @@ const Basketball = () => {
     const deporte = 'Basketball'
     const url = ('https://v1.basketball.api-sports.io/')
 
+
     const configuraciones = {
         headers: {
             "x-rapidapi-key": "5e4589f6667afda2b7b7e7fdd88c8fad",
@@ -30,6 +31,7 @@ const Basketball = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>{deporte}</h2>
+        <div className='contenido-pages'>
         {infoBasketball.length === 0 ? <Spinner /> : <div className='cards-div'>
             {infoBasketball.map((liga)=>{
                 return <LeaguesCard 
@@ -41,6 +43,7 @@ const Basketball = () => {
                 />
             })}
         </div>}
+        </div>
     </div>
   )
 }

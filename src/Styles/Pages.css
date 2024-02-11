@@ -6,14 +6,20 @@
 }
 
 .titulo{
-    font-size: 48px;
+    font-size: 46px;
     align-self: center;
     display: flex;
     box-sizing: border-box;
     place-items: center;
-    margin: 4rem 0;
+    margin-top: 4rem;
     background-color: #141414;
-    padding: .5rem 1rem;
+    padding: .3rem 1rem 0;
+    letter-spacing: 2px;
+}
+
+.contenido-pages{
+    font-family: 'sportsjersey';
+    padding: 3rem 0 0;
 }
 
 .render-div img:hover{
@@ -45,11 +51,12 @@
     align-items: center;
     background: #003ecc;
     position: fixed;
-    right: 3rem;
-    bottom: 3rem;
+    right: 4rem;
+    bottom: 4rem;
     border-radius: 5px;
     padding-right: 3px;
     border: 5px solid #f56005;
+    z-index: 11;
 }
 
 .navigate-button:hover{

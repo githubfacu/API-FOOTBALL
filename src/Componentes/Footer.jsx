@@ -7,9 +7,11 @@ const Footer = () => {
         justifyContent: 'flex-end',
         background: 'beige',
         marginTop: '2rem',
-        padding: '.3rem 3rem .1rem'
+        padding: '.3rem 3rem .1rem',
+        zIndex: '10'
     }}>
-        <p style={{fontSize: '20px', fontWeight: '500', color: '#003ecc'}}>facus</p>
+      <a href='https://github.com/githubfacu' target='blank' style={{color: '#002ecc', fontSize: '22px', alignSelf: 'center', marginRight: '.5rem'}}><i className="fa-brands fa-github" ></i></a>
+      <p style={{fontFamily: 'sportsjersey', fontSize: '20px', color: '#002ecc', paddingBottom:'2.5px'}}>facus</p>
     </div>
   )
 }

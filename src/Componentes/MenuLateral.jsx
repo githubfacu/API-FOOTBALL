@@ -5,6 +5,7 @@ import '../Styles/MenuLateral.css'
 const MenuLateral = () => {
 
   const [over, setOver] = useState(false)
+  
   const ligas = [
     {deporte: 'Baseball'},
     {deporte: 'Basketball'},
@@ -28,10 +29,10 @@ const MenuLateral = () => {
   return (
     <div className='menu-lateral' onMouseOut={ocultarMenu} onMouseOver={mostrarMenu}>
       {over ? <div className='desplegable'>
+        <img src="/Images/115-sm.jpg" alt="logo-futbol" />
         {ligas.map((liga)=>{
           return <MenuLateralCard props={liga}/>
         })}
-        <img src="/Images/115-sm.jpg" alt="logo-futbol" />
       </div> : <i className="fa-solid fa-angle-right fa-xl"></i>}
 
     </div>

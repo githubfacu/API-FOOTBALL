@@ -20,7 +20,7 @@ const BuscarPreDefinida = () => {
         padding: '10px',
         width: '200px',
         justifyContent: 'center',
-        background: '#141414'
+        background: '#141414',
     }}>
         {over ? 
             <div style={{display:'flex', flexDirection: 'column', alignItems: 'center'}}>

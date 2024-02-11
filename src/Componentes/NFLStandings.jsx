@@ -152,6 +152,8 @@ const NFLStandings = () => {
                 })}
             </ul>
         </article>
+        <p className='izquierda'>NFL</p>
+        <p className='derecha'>NFL</p>
 
       </div>
     )}

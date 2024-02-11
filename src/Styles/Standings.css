@@ -21,6 +21,12 @@
     width: 50%;
 }
 
+.standings-render h2{
+    color: #ff7011;
+    background-color: #181818;
+    padding: 1rem 1.5rem .8rem;
+}
+
 .datos-de-tabla{
     display: flex;
     box-sizing: border-box;
@@ -41,7 +47,7 @@
 }
 
 .datos-de-tabla h3{
-    padding: 5px 0;
+    padding: 8px 0 5px;
     width: 12%;
     margin: 0%;
     text-align: center;
@@ -49,7 +55,7 @@
 }
 
 .datos-de-tabla-NFL h3{
-    padding: 5px 0;
+    padding: 8px 0 5px;
     width: 12%;
     margin: 0%;
     text-align: center;
@@ -71,6 +77,8 @@
     width: 100%;
     list-style-type: none;
     padding: 0;
+    font-family: 'sportsjersey';
+    font-size: 18px;
 }
 
 .club-names{
@@ -102,4 +110,30 @@
 
 .club-names h3{
     text-align: start;
+}
+
+.standing-table .izquierda{
+    position: absolute;
+    left: 11%;
+    letter-spacing: 30px;
+    font-size: 18px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color:cadetblue;
+    font-weight: 500;
+    z-index: -1;
+}
+
+.standing-table .derecha{
+    content:initial;
+    position: absolute;
+    right: 11%;
+    height: 100%;
+    letter-spacing: 30px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    color: cadetblue;
+    font-weight: 500;
+    text-align: end;
+    z-index: -1;
 }

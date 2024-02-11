@@ -13,14 +13,6 @@
     padding: 16px;
 }
 
-.home a:nth-child(2){
-
-}
-
-.home a:nth-child(3){
-
-}
-
 .home a{
     display: flex;
     flex-direction: row;
@@ -31,16 +23,14 @@
     background-color: #ff7011;
     color: #9f0000;
     height: 90px;
+    letter-spacing: 2px;
+    padding-top: 3px;
 }
 
 .home a img{
     height: 90%;
     position: absolute;
     left: 1%;
-}
-
-.home a h2{
-
 }
 
 .home a:hover{

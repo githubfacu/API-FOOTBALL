@@ -29,18 +29,20 @@ const Volleyball = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>{deporte}</h2>
-        {infoVolley.length === 0 ? <Spinner /> : <div className='cards-div'>
-            {infoVolley.map((liga)=>{
-                return <LeaguesCard 
-                    id = {liga.id}
-                    name = {liga.name}
-                    logo = {liga.logo}
-                    url = {url}
-                    deporte = {deporte}
-                />
-            })}
+        <div className='contenido-pages'>
+            {infoVolley.length === 0 ? <Spinner /> : <div className='cards-div'>
+                {infoVolley.map((liga)=>{
+                    return <LeaguesCard 
+                        id = {liga.id}
+                        name = {liga.name}
+                        logo = {liga.logo}
+                        url = {url}
+                        deporte = {deporte}
+                    />
+                })}
+            </div>
+            }
         </div>
-        }
     </div>
   )
 }

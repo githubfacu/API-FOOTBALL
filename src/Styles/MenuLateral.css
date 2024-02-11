@@ -4,17 +4,28 @@
     position: fixed;    
     height: 100%;
     background-color:beige;
-    justify-content: center;
-    top: 0;
+    top: 90px;
     left: 0;
     z-index: 9;
+    width: 20px;
     padding: 0 .5rem;
     box-shadow: 4px 0 12px -4px rgba(0, 0, 0, 0.75);
+    transition: all .3s ease-in-out;
+
+}
+
+.menu-lateral:hover{
+    width: 140px;
+    transition: all .3s ease-in-out .1s;
+
 }
 
 @keyframes transform {
     0%{
-    transform: translateX(-100%)
+    transform: translateX(-140px)
+    }
+    20%{
+        transform: translateX(-140px)
     }
     100%{
     transform: translateX(0%)
@@ -25,21 +36,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .menu-lateral .fa-angle-right{
     color: blue;
     align-self: center;
     padding: .3rem;
-    animation: transform .5s 1;
+    animation: transform .3s 1;
 }
 
 .menu-lateral img{
-    width: 78%;
-    position: absolute;
-    top: 102px;
+    width: 125px;
     align-self: center;
     animation: transform .5s 1;
+    position: relative;
+    margin-bottom: 2px;
 }
 
 .menu-lateral a{
@@ -48,13 +60,19 @@
     box-sizing: border-box;
     width: 100%;
     text-align: center;
-    padding: .5rem 1rem;
+    padding: 10px 15px 7px;
     margin: 10px 0 0;
     animation: transform .5s 1;
+    letter-spacing: 1px;
 }
-
 
 .menu-lateral a:hover{
     background-color: #e43100;
     color: beige;
+}
+
+.menu-lateral i{
+    position: absolute;
+    top: 40%;
+    left: 5px;
 }

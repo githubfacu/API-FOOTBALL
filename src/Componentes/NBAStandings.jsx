@@ -39,16 +39,12 @@ const NBAStandings = () => {
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center',
-                position: 'relative',
-                margin: '5% 0 7%'
+                marginBottom: '2rem'
                 }}>
                 <img style={{
-                    maxWidth: '150px', 
-                    maxHeight:'150px', 
-                    position: 'absolute',
-                    left: '5%'
+                    maxWidth: '250px', 
+                    maxHeight:'250px', 
                     }} src="/Images/eastern_conference_all_stars.png" alt="nba-logo" />
-                <h2 style={{fontSize: '32px'}}>Conferencia Este</h2>
             </div>
             <div className='datos-de-tabla'>
                 <h3 style={{width: '14%'}}>Pos</h3>
@@ -78,16 +74,12 @@ const NBAStandings = () => {
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center',
-                position: 'relative',
-                margin: '7% 0'
+                margin: '2rem 0'
                 }}>
                 <img style={{
-                    maxWidth: '150px', 
-                    maxHeight:'150px', 
-                    position: 'absolute',
-                    left: '5%'
-                    }}src="/Images/nba-Western_Conference.png" alt="nba-logo" />
-                <h2 style={{fontSize: '32px'}}>Conferencia Oeste</h2>
+                    maxWidth: '250px', 
+                    maxHeight:'250px', 
+                }}src="/Images/nba-Western_Conference.png" alt="nba-logo" />
             </div>                
             <div className='datos-de-tabla'>
                 <h3 style={{width: '14%'}}>Pos</h3>
@@ -109,7 +101,8 @@ const NBAStandings = () => {
                 })}
             </ul>
         </article>
-
+        <p className='izquierda'>NBA</p>
+        <p className='derecha'>NBA</p>
       </div>
     )}
   </div>

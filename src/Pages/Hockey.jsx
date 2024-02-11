@@ -24,19 +24,21 @@ const Hockey = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>{deporte}</h2>
-        {infoHockey.length === 0 ? <Spinner /> : <div className='cards-div'>
-            {infoHockey.map((liga)=>{
-                return <LeaguesCard 
-                    id = {liga.id}
-                    name = {liga.name}
-                    logo = {liga.logo}
-                    url = {url}
-                    deporte = {deporte}
+        <div className='contenido-pages'>
+            {infoHockey.length === 0 ? <Spinner /> : <div className='cards-div'>
+                {infoHockey.map((liga)=>{
+                    return <LeaguesCard 
+                        id = {liga.id}
+                        name = {liga.name}
+                        logo = {liga.logo}
+                        url = {url}
+                        deporte = {deporte}
 
-                />
-            })}
+                    />
+                })}
+            </div>
+            }
         </div>
-        }
     </div>
   )
 }

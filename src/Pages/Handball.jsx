@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import LeaguesCard from '../Componentes/LeaguesCard'
-import '../Styles/Pages.css'
 import Spinner from '../Componentes/Spinner'
+import '../Styles/Pages.css'
 
 export default function Handball(){
     const [handballInfo, setHandballInfo] = useState([])
@@ -85,18 +85,20 @@ export default function Handball(){
     return (
         <div className='render-div'>
             <h2 className='titulo'>{deporte}</h2>
-            {handballInfo.length === 0 ? <Spinner /> : <div className='cards-div'>
-                {handballInfo.map((liga)=>{
-                return <LeaguesCard 
-                    id = {liga.id}
-                    name = {liga.name}
-                    logo = {liga.logo}
-                    url = {url}
-                    deporte = {deporte}
-                />
-                })}
+            <div className='contenido-pages'>
+                {handballInfo.length === 0 ? <Spinner /> : <div className='cards-div'>
+                    {handballInfo.map((liga)=>{
+                    return <LeaguesCard 
+                        id = {liga.id}
+                        name = {liga.name}
+                        logo = {liga.logo}
+                        url = {url}
+                        deporte = {deporte}
+                    />
+                    })}
+                </div>
+                }
             </div>
-            }
         </div>
     )
 }

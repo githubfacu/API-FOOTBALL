@@ -3,8 +3,8 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import LeaguesCard from '../Componentes/LeaguesCard'
 import BuscarPreDefinida from '../Componentes/BuscarPreDefinida'
-import '../Styles/Pages.css'
 import Spinner from '../Componentes/Spinner'
+import '../Styles/Pages.css'
 
 
 export default function Baseball(){
@@ -69,17 +69,20 @@ export default function Baseball(){
     return (
         <div className='render-div'>
             <h2 className='titulo'>{deporte}</h2>
-            {info.length === 0 ? <Spinner /> : <div className='cards-div'>
-            {info.map((liga)=>{
-                return <LeaguesCard 
-                    id = {liga.id}
-                    name = {liga.name}
-                    logo = {liga.logo}
-                    url = {url}
-                    deporte = {deporte}
-                />
-            })}
+            <div className='contenido-pages'>
+                {info.length === 0 ? <Spinner /> : <div className='cards-div'>
+                    {info.map((liga)=>{
+                    return <LeaguesCard 
+                        id = {liga.id}
+                        name = {liga.name}
+                        logo = {liga.logo}
+                        url = {url}
+                        deporte = {deporte}
+                    />
+                })}
             </div>}
+            </div>
+            
             <section>
                 <BuscarPreDefinida />
             </section>

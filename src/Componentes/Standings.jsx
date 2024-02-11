@@ -14,6 +14,9 @@ const Standings = () => {
   const url = sessionStorage.getItem('url')
   const endpoint = (url+`standings?league=${params.id}&season=${season}`)
 
+  const deporte = params.deporte
+  console.log(deporte);
+
   const configuraciones = {
     headers: {
         "x-rapidapi-key": "5e4589f6667afda2b7b7e7fdd88c8fad",
@@ -49,19 +52,22 @@ const Standings = () => {
   console.log(info);
   console.log(url);
 
+
   return (
     <div className='standing-table'>
       <SelectYear selectSeason={selectSeason}/>
 
         {(info.length === 0 && cargandoDatos) && <div className='spinner-container'><Spinner /></div>}
         {(info.length === 0 && !cargandoDatos) && <p style={{
-          marginTop: '2rem', padding: '.5rem 1rem', background: '#121212'}}>Datos no encontrados para esta liga, seleccione otra liga, temporada, o vuelva a intentarlo mas tarde</p>}
+          marginTop: '2.5rem', padding: '.5rem 1rem', background: '#121212'}}>Datos no encontrados para esta liga, seleccione otra liga, temporada, o vuelva a intentarlo mas tarde</p>}
       
         {info.length !== 0 && (
         <div className='standings-render'>
           {info.map((club)=>{
             return <StandingCard props={club}/>
           })}
+          <p className='izquierda'>{deporte}</p>
+          <p className='derecha'>{deporte}</p>
         </div>
       )}
 

@@ -19,9 +19,9 @@
 }
 
 .header h2{
-    font-size: 24px;
+    font-size: 26px;
     margin: 0;
-    padding: .2rem .5rem 0;
+    padding: .3rem .6rem 0;
     color: beige;
 }
 .header h2:hover{

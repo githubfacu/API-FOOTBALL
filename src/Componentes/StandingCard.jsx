@@ -7,7 +7,7 @@ const StandingCard = ({props}) => {
   const [puntos, setPuntos] = useState({})
 
   const clubes = props
-  const pais = props[0].country.name
+  const pais = props[0].country.name.toUpperCase()
 
   console.log(clubes)
   console.log(puntos)
