@@ -13,7 +13,7 @@ const NFL = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>NFL</h2>
-        <img style={{alignSelf: 'center', marginTop: '-1.2rem'}} onClick={navegarNFLStandings} width={'350'} src="/Images/logo-NFL.png" alt="NFL-logo" />
+        <img style={{alignSelf: 'center', marginTop: '2.5rem', padding: '.5rem 1rem .3rem', background: '#090909'}} onClick={navegarNFLStandings} height={'230px'} src="/Images/logo-NFL.png" alt="NFL-logo" />
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import SelectYear from './SelectYear'
 import NFLStandingCard from './NFLStandingCard'
-import '../Styles/Standings.css'
 import Spinner from './Spinner'
+import '../Styles/Standings.css'
 
 
 const NFLStandings = () => {
@@ -36,11 +36,14 @@ const NFLStandings = () => {
   return (
     <div className='standing-table'>
     <SelectYear selectSeason={selectSeason}/>
+    {nflInfo.length !== 0 && <>
+    <img style={{position: 'absolute', right: '70%', top: '30%', zIndex: '1'}} width={'125px'} src="/Images/logo-NFL.png" alt="nfl-logo" />
+    <img style={{position: 'absolute', left: '70%', top: '30%', zIndex: '1'}} width={'125px'} src="/Images/logo-NFL.png" alt="nfl-logo" />
+    </> }
     {nflInfo.length === 0 ? <div className='spinner-container'><Spinner /></div> : (
-      <div className='standings-render'>
-        <img style={{maxWidth: '400px', maxHeight:'350px'}} src="/Images/logo-NFL.png" alt="nfl-logo" />
-        <article>
-            <h2 style={{textAlign: 'center', marginTop: '3rem'}}>American Football Conference</h2>
+      <div className='standings-render' style={{margin: '1rem'}}>
+        <article style={{width: '100%', position: 'relative'}}>
+            <h2 className='basketball' style={{textAlign: 'center', margin: '1.5rem 0 0'}}>AMERICAN FOOTBALL CONFERENCE</h2>
             <h3>AFC East</h3>      
             <div className='datos-de-tabla-NFL'>
                 <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>
@@ -97,7 +100,7 @@ const NFLStandings = () => {
         </article>
 
         <article>
-            <h2 style={{textAlign: 'center', marginTop: '4rem'}}>National Football Conference</h2>
+            <h2 className='basketball' style={{textAlign: 'center', margin: '4rem 0 0'}}>NATIONAL FOOTBALL CONFERENCE</h2>
             <h3>NFC East</h3>
             <div className='datos-de-tabla-NFL'>
                 <h3>Pos</h3><h3 className='club'>Club</h3><h3>PG</h3><h3>PP</h3><h3>PF</h3><h3>PC</h3>

@@ -1,13 +1,27 @@
 @font-face {
   font-family: 'Athletic';
-  src: url('../public/Fuentes/Athletic.TTF') format('truetype');
+  src: url('/Fuentes/Athletic.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'sportsjersey';
-  src: url('../public/Fuentes/sportsjersey.ttf') format('truetype');
+  src: url('/Fuentes/sportsjersey.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Basketball';
+  src: url('/Fuentes/Basketball.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'varsity_regular';
+  src: url('/Fuentes/varsity_regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,7 +34,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #181818;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +42,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --favicon: url('/Images/favicon.ico'), auto;
+  --cursor-cur: url('/Images/hollow_blue.cur'), auto;
+  --cursor-busy: url('/Images/hollow_rw_busy.cur'), auto;
 }
 
 a {

@@ -15,7 +15,7 @@ const LeaguesCard = ({ id, name, logo, url, deporte}) => {
     <div className='card' id={id}>
       <h2 onClick={navegacion}>{name}</h2>
       <img onClick={navegacion} className='logo'
-        src={logo} alt={"bandera de la liga: " + `${name}`} />
+        src={logo} alt={`${name}` + ' ' + "logo"} />
     </div>
   )
 }

@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import LeaguesCard from '../Componentes/LeaguesCard'
-import '../Styles/Pages.css'
 import Spinner from '../Componentes/Spinner'
+import { handleScroll } from '../utils/WheelScroll'
+import '../Styles/Pages.css'
 
 const Volleyball = () => {
     const [infoVolley, setInfoVolley] = useState([])
     const deporte = 'Volley'
     const url = ('https://v1.volleyball.api-sports.io/')
+    const containerRef = useRef(null);
 
     const configuraciones = {
         headers: {
@@ -26,11 +28,15 @@ const Volleyball = () => {
 
     console.log(infoVolley);
 
+    const handleWheel = (event) => {
+        handleScroll(event, containerRef);
+    };
+
   return (
     <div className='render-div'>
         <h2 className='titulo'>{deporte}</h2>
         <div className='contenido-pages'>
-            {infoVolley.length === 0 ? <Spinner /> : <div className='cards-div'>
+            {infoVolley.length === 0 ? <Spinner /> : <div ref={containerRef} onWheel={handleWheel} className='cards-div'>
                 {infoVolley.map((liga)=>{
                     return <LeaguesCard 
                         id = {liga.id}

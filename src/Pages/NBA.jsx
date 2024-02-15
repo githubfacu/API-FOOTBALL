@@ -12,7 +12,7 @@ const NBA = () => {
   return (
     <div className='render-div'>
         <h2 className='titulo'>NBA</h2>
-        <img style={{alignSelf: 'center', marginTop: '-.5rem'}} onClick={navegarNBAStandings} width={'370'} src="/Images/National-Basketball-Association-Logo-1969-2017.png" alt="NBA-logo" />
+        <img style={{alignSelf: 'center', marginTop: '2.5rem', padding: '1rem 0', background: '#090909'}} onClick={navegarNBAStandings} height={'210px'} src="/Images/National-Basketball-Association-Logo-1969-2017.png" alt="NBA-logo" />
     </div>
   )
 }

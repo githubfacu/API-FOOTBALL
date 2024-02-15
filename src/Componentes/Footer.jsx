@@ -11,7 +11,7 @@ const Footer = () => {
         zIndex: '10'
     }}>
       <a href='https://github.com/githubfacu' target='blank' style={{color: '#002ecc', fontSize: '22px', alignSelf: 'center', marginRight: '.5rem'}}><i className="fa-brands fa-github" ></i></a>
-      <p style={{fontFamily: 'sportsjersey', fontSize: '20px', color: '#002ecc', paddingBottom:'2.5px'}}>facus</p>
+      <p style={{fontFamily: 'sportsjersey', fontSize: '20px', color: '#002ecc', paddingBottom:'3px'}}>facus</p>
     </div>
   )
 }

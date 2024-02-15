@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import LeaguesCard from '../Componentes/LeaguesCard'
-import '../Styles/Pages.css'
 import Spinner from '../Componentes/Spinner'
+import { handleScroll } from '../utils/WheelScroll'
+import '../Styles/Pages.css'
 
 
 const Basketball = () => {
     const [infoBasketball, setInfoBasketball] = useState([])
     const deporte = 'Basketball'
     const url = ('https://v1.basketball.api-sports.io/')
-
+    const containerRef = useRef(null);
 
     const configuraciones = {
         headers: {
@@ -26,13 +27,17 @@ const Basketball = () => {
         .then(data=>setInfoBasketball(data.response))
     },[])
 
+    const handleWheel = (event) => {
+        handleScroll(event, containerRef);
+    };
+
     console.log(infoBasketball);
 
   return (
     <div className='render-div'>
         <h2 className='titulo'>{deporte}</h2>
         <div className='contenido-pages'>
-        {infoBasketball.length === 0 ? <Spinner /> : <div className='cards-div'>
+        {infoBasketball.length === 0 ? <Spinner /> : <div ref={containerRef} onWheel={handleWheel} className='cards-div'>
             {infoBasketball.map((liga)=>{
                 return <LeaguesCard 
                     id = {liga.id}

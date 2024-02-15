@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import SelectYear from './SelectYear'
-import '../Styles/Standings.css'
 import Spinner from './Spinner'
+import '../Styles/Standings.css'
 
 const NBAStandings = () => {
 
@@ -31,20 +31,19 @@ const NBAStandings = () => {
 
   return (
     <div className='standing-table'>
-    <SelectYear selectSeason={selectSeason}/>
-    {infoNBA.length === 0 ? <div className='spinner-container'><Spinner /></div> : (
-      <div className='standings-render'>
+      <div style={{position: 'absolute', left: '65%'}}><SelectYear selectSeason={selectSeason}/></div>
+    {infoNBA.length === 0 ? <div style={{marginTop: '10rem'}} className='spinner-container'><Spinner /></div> : (
+      <div className='standings-render' style={{margin: '0'}}>
         <article>
             <div style={{
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center',
-                marginBottom: '2rem'
+                marginBottom: '1rem',
+                background: '#181818',
                 }}>
-                <img style={{
-                    maxWidth: '250px', 
-                    maxHeight:'250px', 
-                    }} src="/Images/eastern_conference_all_stars.png" alt="nba-logo" />
+                <img style={{position: 'absolute', right: '65%'}} width={'125px'} src="/Images/eastern_conference_all_stars.png" alt="nba-logo" />
+                <h2 className='basketball'>CONFERENCIA ESTE</h2>
             </div>
             <div className='datos-de-tabla'>
                 <h3 style={{width: '14%'}}>Pos</h3>
@@ -74,12 +73,11 @@ const NBAStandings = () => {
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center',
-                margin: '2rem 0'
+                margin: '2rem 0 1rem',
+                background: '#181818'
                 }}>
-                <img style={{
-                    maxWidth: '250px', 
-                    maxHeight:'250px', 
-                }}src="/Images/nba-Western_Conference.png" alt="nba-logo" />
+                <img style={{position: 'absolute', right: '65%'}} width={'125px'} src="/Images/nba-Western_Conference.png" alt="nba-logo" />
+                <h2 className='basketball'>CONFERENCIA OESTE</h2>
             </div>                
             <div className='datos-de-tabla'>
                 <h3 style={{width: '14%'}}>Pos</h3>

@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import LeaguesCard from '../Componentes/LeaguesCard'
-import BuscarPreDefinida from '../Componentes/BuscarPreDefinida'
 import Spinner from '../Componentes/Spinner'
+import { handleScroll } from '../utils/WheelScroll'
 import '../Styles/Pages.css'
 
 
@@ -11,6 +11,7 @@ export default function Baseball(){
     const [info, setInfo] = useState([])
     const deporte = 'Baseball'
     const url = ('https://v1.baseball.api-sports.io/')
+    const containerRef = useRef(null);
 
     const configuraciones = {
         headers: {
@@ -27,6 +28,10 @@ export default function Baseball(){
         })
         .then(data=>setInfo(data.response))
     }, [])
+
+    const handleWheel = (event) => {
+        handleScroll(event, containerRef);
+    };
 
     // useEffect(()=>{
 
@@ -70,7 +75,7 @@ export default function Baseball(){
         <div className='render-div'>
             <h2 className='titulo'>{deporte}</h2>
             <div className='contenido-pages'>
-                {info.length === 0 ? <Spinner /> : <div className='cards-div'>
+                {info.length === 0 ? <Spinner /> : <div ref={containerRef} onWheel={handleWheel} className='cards-div'>
                     {info.map((liga)=>{
                     return <LeaguesCard 
                         id = {liga.id}
@@ -82,10 +87,6 @@ export default function Baseball(){
                 })}
             </div>}
             </div>
-            
-            <section>
-                <BuscarPreDefinida />
-            </section>
         </div>
     )
 }

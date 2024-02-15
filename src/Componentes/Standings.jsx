@@ -55,11 +55,11 @@ const Standings = () => {
 
   return (
     <div className='standing-table'>
-      <SelectYear selectSeason={selectSeason}/>
+      <div style={{position: 'absolute', left: '65%'}}><SelectYear selectSeason={selectSeason}/></div>
 
-        {(info.length === 0 && cargandoDatos) && <div className='spinner-container'><Spinner /></div>}
+        {(info.length === 0 && cargandoDatos) && <div className='spinner-container' style={{marginTop: '10rem'}}><Spinner /></div>}
         {(info.length === 0 && !cargandoDatos) && <p style={{
-          marginTop: '2.5rem', padding: '.5rem 1rem', background: '#121212'}}>Datos no encontrados para esta liga, seleccione otra liga, temporada, o vuelva a intentarlo mas tarde</p>}
+          marginTop: '4.5rem', padding: '.5rem 1rem', background: '#090909'}}>Datos no encontrados para esta liga, seleccione otra liga, temporada, o vuelva a intentarlo mas tarde</p>}
       
         {info.length !== 0 && (
         <div className='standings-render'>

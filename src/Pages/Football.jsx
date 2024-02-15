@@ -1,14 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { toast } from 'react-toastify'
 import LeaguesCard from '../Componentes/LeaguesCard'
-import '../Styles/Pages.css'
 import Spinner from '../Componentes/Spinner'
+import { handleScroll } from '../utils/WheelScroll'
+import '../Styles/Pages.css'
 
 export default function Football(){
     const [infoFutbol, setInfoFutbol] = useState([])
     const deporte = 'Football'
     const url = ('https://v3.football.api-sports.io/')
-
+    const containerRef = useRef(null);
 
     const mouseClick = () => {
         toast.info('🦄 Wow so easy!', {
@@ -38,12 +39,15 @@ export default function Football(){
 
     console.log(infoFutbol);
 
+    const handleWheel = (event) => {
+        handleScroll(event, containerRef);
+    };
 
     return (
         <div className='render-div'>
             <h2 className='titulo'>{deporte}</h2>
             <div className='contenido-pages'>
-                {infoFutbol.length === 0 ? <Spinner /> : <div className='cards-div'>
+                {infoFutbol.length === 0 ? <Spinner /> : <div ref={containerRef} onWheel={handleWheel} className='cards-div'>
                 {infoFutbol.map((liga)=>{
                     return <LeaguesCard 
                         id = {liga.league.id}

@@ -12,9 +12,11 @@
     box-sizing: border-box;
     place-items: center;
     margin-top: 4rem;
-    background-color: #141414;
+    background-color: #090909;
     padding: .3rem 1rem 0;
     letter-spacing: 2px;
+    color: #ff7011;
+    cursor:default;
 }
 
 .contenido-pages{
@@ -23,24 +25,30 @@
 }
 
 .render-div img:hover{
-    cursor: pointer;
-    filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #ff7011);
 }
 
 .cards-div{
     display: flex;
     flex-direction: row;
     margin-left: 90px;
-    overflow-y:hidden;
+    background-color: #090909;
     overflow-x:auto;
     white-space: nowrap;
-    background-color: #141414;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
-    border-right: 2px solid white;
-    display: inline-block;
+    border-right: 4px dashed rgb(78, 78, 78);
+    padding: 1rem;
 }
 
 .navigate-button{
@@ -49,7 +57,7 @@
     height: 50px;
     justify-content: center;
     align-items: center;
-    background: #003ecc;
+    background: #002ecc;
     position: fixed;
     right: 4rem;
     bottom: 4rem;
@@ -60,11 +68,6 @@
 }
 
 .navigate-button:hover{
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #ff7011);
   cursor: pointer;
-}
-
-.render-div section{
-    align-self: center;
-    margin-top: 4rem;
 }
