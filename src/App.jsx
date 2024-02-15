@@ -16,7 +16,7 @@ import Standings from './Componentes/Standings'
 import ErrorBoundary from './utils/ErrorBoundary'
 import NBAStandings from './Componentes/NBAStandings'
 import NFLStandings from './Componentes/NFLStandings'
-import NavigateButton from './Componentes/navigateButton'
+import NavigateButton from './Componentes/NavigateButton'
 import Footer from './Componentes/Footer'
 import './App.css'
 
